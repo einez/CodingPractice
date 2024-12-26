@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayConverter {
     public static int[][] convert2(String s) {
-        String[] rows = s.substring(2, s.length() - 2).split("],\\[");
+        String[] rows = s.substring(2, s.length() - 2).split("],\\s*\\[");
         int[][] ans = new int[rows.length][];
         for (int i = 0; i < rows.length; i++) {
             ans[i] = parse(rows[i]);
@@ -13,7 +13,7 @@ public class ArrayConverter {
     }
 
     private static int[] parse(String nums) {
-        return Arrays.stream(nums.trim().split(","))
+        return Arrays.stream(nums.trim().split(",\\s*"))
                 .mapToInt(Integer::parseInt).toArray();
     }
 }

@@ -1,4 +1,6 @@
-package einez.practice;
+package einez.practice.miscellaneous;
+
+import einez.practice.ArrayConverter;
 
 import java.util.Arrays;
 
